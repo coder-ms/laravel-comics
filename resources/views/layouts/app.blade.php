@@ -1,5 +1,5 @@
 <?php
-$footerSearchs = config('comicsdb.footerSearchs');
+    $footerSearch = config('dcComics.footerSearch');
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
