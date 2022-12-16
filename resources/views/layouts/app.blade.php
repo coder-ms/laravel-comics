@@ -1,3 +1,6 @@
+<?php
+$footerSearchs = config('comicsdb.footerSearchs');
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -5,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>@yield('pageTitle', 'Home Page')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +20,13 @@
 
 <body>
 
- 
+    @include('partials.banner')
+    @include('partials.header')
+    @include('partials.jumbotron')
+    <main>
+        @yield('start')
+    </main>
+    @include('partials.footer', compact('footerSearch'))
 
 </body>
 
