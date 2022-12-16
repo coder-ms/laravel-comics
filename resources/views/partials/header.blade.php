@@ -9,7 +9,7 @@
             </li>
             <li class="{{ Route::currentRouteName() == 'comics' ? 'active' : '' }}">
                 <a href="{{ route('comics') }}">comics</a>
-            </li>
+            </li> 
             <li class="{{ Route::currentRouteName() == 'movies' ? 'active' : '' }}">
                 <a href="#">movies</a>
             </li>

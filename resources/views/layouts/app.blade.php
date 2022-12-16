@@ -19,14 +19,14 @@
 </head>
 
 <body>
-
+    <h1>Prova</h1>
     @include('partials.banner')
     @include('partials.header')
     @include('partials.jumbotron')
     <main>
         @yield('start')
     </main>
-    @include('partials.footer', compact('footerSearch'))
+    {{-- @include('partials.footer', compact('footerSearch')) --}}
 
 </body>
 
