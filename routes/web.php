@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
+});//->welcome;
+/*
 Route::get('/contatti', function () {
     return 'Contatti';
 });
+*/
