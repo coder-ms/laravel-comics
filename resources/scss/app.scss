@@ -1,141 +1,188 @@
 @import '~bootstrap/scss/bootstrap';
 
+#topBanner{
+    background-color: #0282f9;
+    font-size: 10px;
+}
 
-// FONTS
+header{
+    height: 90px;
 
-    
-    #topBanner{
-        background-color: #0282f9;
-    }
-    
-    
-    header{
-        height: 90px;
-    
-        .logo{
-            height: 60px;
-    
-            img{
-                height: 100%;
-            }
-        }
-    
-        nav{
-            width: 60%;
-            height: 100%;
-    
-            ul{
-                list-style: none;
-                text-transform: uppercase;
-                font-size: 10px;
-                line-height: 90px;
-                li{
-                    transition: box-shadow .5s;
-                    a{
-                        text-decoration: none;
-                        color: black;
-                    }
-    
-                    &:hover{
-                        box-shadow: inset 0 -12px 0 -4px #0282f9;
-                    }
-    
-                    &.active{
-                        box-shadow: inset 0 -12px 0 -4px #0282f9;
-                    }
-    
-                }
-            }
-        }
-    
-        .search{
-            border: none;
-            border-bottom: 3px solid #0282f9;
-            text-align: right;
-            outline: none;
-        }
-    }
-    
-    #jumbotron{
-        height: 625px;
-        overflow: hidden;
+    .logo{
+        height: 60px;
+
         img{
-            width: 100%;
-            height: 625px;
+            height: 100%;
         }
     }
+
+    nav{
+        width: 60%;
+        height: 100%;
+
+        ul{
+            list-style: none;
+            font-size: 13px;
+            line-height: 90px;
+            li{
+                transition: box-shadow .5s;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+
+                &:hover{
+                    box-shadow: inset 0 -12px 0 -6px #0282f9;
+                }
+
+                &.active{
+                    box-shadow: inset 0 -12px 0 -6px #0282f9;
+                }
+
+            }
+        }
+    }
+
+    .searchBar{
+        border: 2px solid #0282f9;
+        outline: none;
+    }
+}
+
+#jumbotron{
+    max-height: 625px;
+    overflow: hidden;
+    img{
+
+        width: 100%;
+    }
+}
+main{
+    section{
+
+        background-color: #1c1c1c;
     
-    footer{
-        background-color: #313131;
+        #CurrentSeries{
     
-        .footerTop{
-            height: 320px;
-            background-image: url('../img/footer-bg.jpg');
-            background-size: cover;
+            .cover-wrapper{
+                color: white;
+                font-size: 13px;
     
-            .container{
-                height: 100%;
-                position: relative;
-                overflow: hidden;
+                .cover{
+                    width: 100%;
+                    cursor: pointer;
     
-                ul{
-                    list-style: none;
-                    color: #959595;
-                    font-size: 10px;
-                    margin-right: 20px;
-    
-                    h4{
-                        font-size: 13px;
-                        color: white;
-                        text-transform: uppercase;
-                        margin: 12px 0;
+                    img{
+                        width: 100%;
                     }
     
-                    li{
-                        padding: 2px 0;
+                    &:hover .comicInfo{
+                        clip-path: polygon(50% 500%, 0% 80%, 100% 80%);
+                        color: white;
+                    }
     
-                        &:not(:first-of-type):hover{
-                            text-decoration: underline;
-                            cursor: pointer;
+                    .comicInfo{
+                        background-image: url('https://img.freepik.com/premium-photo/old-texture-background-vintage-grunge-paper-antique-ancient-parchment-wall-design-template_213524-125.jpg');
+                        clip-path: polygon(100% 100%, 0 100%, 100% 100%);
+                        transition: clip-path .4s ease-in;
+                        font-size: 16px;
+                        
+                        .priceAndType{
+                            color: black;
+                            text-align: end;
+                            .type{
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
     
-                img{
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translate(0, -50%);
-                }
+            }
+    
+            .currentSeries{
+                background-color: #0282f9;
+                width: 10vw;
+                transform: translate(0, -50%);
+                color: white;
+                font-weight: 700;
             }
         }
     
-        .footerBottom{
-            height: 80px;
-            .container{
-                height: 100%;
-    
-                .shopBtn{
-                    border: 2px solid #0282f9;
-                    padding: 5px 10px;
-                    text-transform: uppercase;
+        button{
+            background-color: #0282f9;
+            border: none;
+            color: white;
+        }
+    }
+}
+footer{
+    background-color: #313131;
+
+    .footerTop{
+        height: 320px;
+        background-image: url('../img/footer-bg.jpg');
+        background-size: cover;
+
+        .container{
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            ul{
+                list-style: none;
+                color: #959595;
+                font-size: 13px;
+                margin-right: 20px;
+
+                h4{
+                    font-size: 16px;
                     color: white;
-                    font-size: 13px;
+                    margin: 12px 0;
+                    text-transform: uppercase;
                 }
-    
-                .socials{
-                    width: 40%;
-                    h4{
-                        margin: 0;
-                        color: #0282f9;
-                        text-transform: uppercase;
-                        font-weight: 700;
+
+                li{
+                    padding: 2px 0;
+
+                    &:not(:first-of-type):hover{
+                        text-decoration: underline;
+                        cursor: pointer;
                     }
                 }
             }
+
+            img{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
         }
-    
     }
 
+    .footerBottom{
+        height: 80px;
+        .container{
+            height: 100%;
+
+            .shopNowButton{
+                border: 2px solid #0282f9;
+                padding: 5px 10px;
+                color: white;
+                font-size: 16px;
+            }
+
+            .socials{
+                width: 40%;
+                h4{
+                    margin: 0;
+                    color: #0282f9;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+}
 
 
