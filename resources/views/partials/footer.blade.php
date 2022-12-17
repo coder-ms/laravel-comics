@@ -1,6 +1,7 @@
 <footer>
     <div class="footerTop">
         <div class="container d-flex justify-content-start align-items-start">
+            
             <div>
                 <ul>
                    <li><h4>{{ $footerSearch[0]['listTitle'] }}</h4></li>
@@ -8,13 +9,16 @@
                         <li>{{$link}}</li>
                    @endforeach
                 </ul>
+                {{--
                 <ul>
                     <li><h4>{{ $footerSearch[1]['listTitle'] }}</h4></li>
                     @foreach($footerSearch[1]['listItems'] as $link)
                     <li>{{$link}}</li>
                     @endforeach
                 </ul>
+                --}}
             </div>
+            {{--
             <div>
                 <ul>
                     <li><h4>{{ $footerSearch[2]['listTitle'] }}</h4></li>
@@ -31,6 +35,7 @@
                     @endforeach
                 </ul>
             </div>
+            --}}
             <img src="{{Vite::asset('resources/img/dc-logo-bg.png')}}" alt="DC logo">
         </div>
     </div>
